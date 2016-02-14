@@ -1,3 +1,5 @@
+html { width: 100%; overflow-x: hidden; }
+
 header {
     background-color: $off-white;
 
@@ -17,6 +19,9 @@ header {
     .section-content {
         padding: 12px 12px;
     }
+    .item {
+        padding: 12px 12px;
+    }
     .section-link-container {
         width: 100%;
         text-align: center;
@@ -28,7 +33,7 @@ header {
     text-align: center;
 }
 
-#about {
+#about, #work {
     background-color: $section-background;
 }
 
