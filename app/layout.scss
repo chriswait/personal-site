@@ -9,6 +9,7 @@ main {
     margin: 0 auto;
     max-width: 80%;
     @media screen and (max-width: $break-gt-xs) {
+        max-width: 90%;
         padding: 12px 6px;
     }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm) {
