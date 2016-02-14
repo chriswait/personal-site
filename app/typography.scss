@@ -1,0 +1,58 @@
+html {
+    font-family: "AvenirNext-Regular";
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+.nav-text {
+    color: $text;
+    font-size: 28px;
+}
+
+.hero-title {
+    color: $accent;
+    font-size: 52px;
+    font-family: "AvenirNext-Bold";
+}
+
+.section-title {
+    color: $text;
+    font-size: 28px;
+    font-family: "AvenirNext-Bold";
+}
+
+.section-content {
+    color: $text;
+    font-size: 24px;
+}
+
+.section-link {
+    color: $accent;
+    font-size: 24px;
+    font-family: "AvenirNext-Bold";
+}
+
+.item-title {
+    color: $accent-secondary;
+    font-size: 24px;
+    font-family: "AvenirNext-Bold";
+}
+
+.item-date {
+    color: $accent-secondary;
+    font-size: 24px;
+    font-family: "AvenirNext-Bold";
+}
+
+.footer-text {
+    color: $accent;
+    font-size: 38px;
+}
+
+.footer-button {
+    color: $white;
+    font-size: 34px;
+    font-family: "AvenirNext-Bold";
+}
