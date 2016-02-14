@@ -1,12 +1,42 @@
 html { width: 100%; overflow-x: hidden; }
+main {
+    @media screen and (max-width: $break-gt-xs) {
+        margin-top: 50px;
+    }
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 80%;
+    @media screen and (max-width: $break-gt-xs) {
+        padding: 12px 6px;
+    }
+    @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm) {
+        padding: 24px 0px;
+    }
+    @media screen and (min-width: $break-md) and (max-width: $break-gt-md) {
+        padding: 48px 0px;
+    }
+    @media screen and (min-width: $break-lg) {
+        padding: 96px 0px;
+    }
+}
 
 header {
     background-color: $off-white;
+    @media screen and (max-width: $break-gt-xs) {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        border-bottom: 1px solid darkgray;
+    }
 
     .navigation {
         height: 50px;
         margin: 0px auto;
-        max-width: 800px;
+        margin: 0 auto;
+        max-width: 80%;
 
         .nav-text, .nav-link {
             padding: 0px 10px;
@@ -16,16 +46,29 @@ header {
 }
 
 .section {
-    padding: 36px 10px;
-    .section-title, .section-content {
-        padding: 12px 12px;
+
+    .section-item, .section-title {
+        padding: 12px 0px;
     }
-    .item {
-        padding: 12px 12px;
+    .item-header {
+        padding: 12px 0px;
     }
+
     .section-link-container {
         width: 100%;
         text-align: center;
+        @media screen and (max-width: $break-gt-xs){
+            padding: 12px 0px;
+        }
+        @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm) {
+            padding: 24px 0px;
+        }
+        @media screen and (min-width: $break-md) and (max-width: $break-gt-md) {
+            padding: 48px 0px;
+        }
+        @media screen and (min-width: $break-lg) {
+            padding: 48px 0px;
+        }
     }
 }
 
@@ -42,4 +85,7 @@ footer {
     background-color: $off-white;
     text-align: center;
     padding: 60px 0px;
+    @media screen and (max-width: $break-gt-xs){
+        padding: 40px 0px;
+    }
 }

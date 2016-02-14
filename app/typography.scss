@@ -23,8 +23,8 @@ html {
     color: $text;
     font-family: "AvenirNext-Bold";
     font-size: 28px;
-    @media screen and (max-width: $break-gt-xs)                             { font-size: 26px; }
-    @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 36px; }
+    @media screen and (max-width: $break-gt-xs)                             { font-size: 28px; }
+    @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 34px; }
     @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 42px; }
     @media screen and (min-width: $break-lg)                                { font-size: 52px; }
 }
@@ -40,7 +40,7 @@ html {
 
 .section-link {
     color: $accent;
-    font-family: "AvenirNext-Bold";
+    font-family: "AvenirNext-Regular";
     font-size: 24px;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 26px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 32px; }
@@ -48,14 +48,17 @@ html {
     @media screen and (min-width: $break-lg)                                { font-size: 42px; }
 }
 
-.item-title, .item-date  {
-    color: $accent-secondary;
-    font-family: "AvenirNext-Bold";
-    font-size: 24px;
-    @media screen and (max-width: $break-gt-xs)                             { font-size: 22px; }
-    @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 26px; }
-    @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 32px; }
-    @media screen and (min-width: $break-lg)                                { font-size: 38px; }
+.item {
+    padding: 12px 0px;
+    .item-title, .item-date  {
+        color: $accent-secondary;
+        font-family: "AvenirNext-Bold";
+        font-size: 24px;
+        @media screen and (max-width: $break-gt-xs)                             { font-size: 22px; }
+        @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 24px; }
+        @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 32px; }
+        @media screen and (min-width: $break-lg)                                { font-size: 38px; }
+    }
 }
 
 .footer-text {
