@@ -4,37 +4,42 @@
         <title></title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <!-- VENDOR -->
-        <link rel='stylesheet' href="dist/vendor.css">
-        <script src="dist/vendor.js"></script>
+        <link rel='stylesheet' href='dist/vendor.css'>
+        <script src='dist/vendor.js'></script>
         
-        <link rel='stylesheet' href="dist/index.css">
+        <link rel='stylesheet' href='dist/index.css'>
     </head>
-    <body ng-app="personalSite">
-       <header>
-           <h1 class="nav-text">Chris Wait</h1>
-            <nav>
-                <a class="nav-text">Blog</a>
-            </nav>
+    <body ng-app='personalSite' ng-cloak>
+        <header> 
+            <div class='navigation' layout='row' layout-align='center center'>
+                <h1 class='nav-text'>Chris Wait</h1>
+                <span flex></span>
+                <nav layout='row'>
+                    <h2><a class='nav-link' href='#'>Blog</a></h2>
+                    <h2><a class='nav-link' href='#'>Work</a></h2>
+                    <h2><a class='nav-link' href='#'>Contact</a></h2>
+                </nav>
+            </div>
         </header>
 
         <main>
-            <h1 class="section-title">About</h1>
-            <div class="section-content">
+            <h1 class='section-title'>About</h1>
+            <div class='section-content'>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 
                 <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus.</p>
             </div>
-            <a class="section-link">More about me</a>
-            <h1 class="item-title">Item title</h1>
-            <h1 class="item-title">Item date</h1>
+            <a class='section-link'>More about me</a>
+            <h1 class='item-title'>Item title</h1>
+            <h1 class='item-title'>Item date</h1>
         </main>
 
         <footer>
-            <h1 class="footer-text">Interested?</h1>
-            <div class="footer-button">
+            <h1 class='footer-text'>Interested?</h1>
+            <div class='footer-button'>
                 <span>Email me</span>
             </div>
         </footer>
-        <script src="dist/index.js"></script>
+        <script src='dist/index.js'></script>
     </body>
 </html>
