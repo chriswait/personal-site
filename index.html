@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='personalSite'>
     <head>
         <title></title>
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
@@ -10,16 +10,15 @@
         <link rel='stylesheet' href='dist/index.css'>
         <script src='dist/templates.js'></script>
     </head>
-    <body ng-app='personalSite' ng-cloak>
-
+    <body ng-cloak ng-controller='MainController'>
         <header>
             <div class='navigation' layout='row' layout-align='center center'>
                 <h1 flex='noshrink' class='nav-text'>Chris Wait</h1>
                 <span flex></span>
                 <nav layout='row'>
-                    <h2><a class='nav-link' href='#'>Blog</a></h2>
-                    <h2><a class='nav-link' href='#'>Work</a></h2>
-                    <h2><a class='nav-link' href='#'>Contact</a></h2>
+                    <h2><a class='nav-link' href='#' ng-click='scrollToId("blog")'>Blog</a></h2>
+                    <h2><a class='nav-link' href='#' ng-click='scrollToId("work")'>Work</a></h2>
+                    <h2><a class='nav-link' href='#' ng-click='scrollToId("footer")'>Contact</a></h2>
                 </nav>
             </div>
         </header>
@@ -30,7 +29,7 @@
             </div>
 
             <section id='about'>
-                <div class="content">
+                <div class='content'>
                     <h1 class='section-title'>About</h1>
                     <div class='section-content'>
                         <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
@@ -44,7 +43,7 @@
             </section>
 
             <section id='blog'>
-                <div class="content">
+                <div class='content'>
                     <h1 class='section-title'>Blog</h1>
                     <blog></blog>
                     <blog></blog>
@@ -55,7 +54,7 @@
             </section>
 
             <section id='work'>
-                <div class="content">
+                <div class='content'>
                     <h1 class='section-title'>Work</h1>
                     <work></work>
                     <work></work>
@@ -67,11 +66,13 @@
 
         </main>
 
-        <footer>
+        <footer id="footer">
             <h1 class='footer-text'>Interested in working together?</h1>
-            <div class='footer-button'>
-                <span>Email me</span>
-            </div>
+            <a href='mailto:chris@chriswait.net?Subject=Hello!'>
+                <div class='footer-button'>
+                    <span>Email me</span>
+                </div>
+            </a>
         </footer>
 
         <script src='dist/index.js'></script>
