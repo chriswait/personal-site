@@ -58,7 +58,7 @@ ROOT_URLCONF = 'personalsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -109,3 +109,8 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
     ],
 }
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, ""),
+]
+print BASE_DIR

@@ -1,14 +1,15 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html ng-app='personalSite'>
     <head>
         <title></title>
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
         <!-- VENDOR -->
-        <link rel='stylesheet' href='dist/vendor.css'>
-        <script src='dist/vendor.js'></script>
+        <link rel='stylesheet' href='{% static "dist/vendor.css" %}'>
+        <script src='{% static "dist/vendor.js" %}'></script>
 
-        <link rel='stylesheet' href='dist/index.css'>
-        <script src='dist/templates.js'></script>
+        <link rel='stylesheet' href='{% static "dist/index.css" %}'>
+        <script src='{% static "dist/templates.js" %}'></script>
     </head>
     <body ng-cloak ng-controller='MainController'>
         <header>
@@ -75,6 +76,6 @@
             </a>
         </footer>
 
-        <script src='dist/index.js'></script>
+        <script src='{% static "dist/index.js" %}'></script>
     </body>
 </html>
