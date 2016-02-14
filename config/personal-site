@@ -1,0 +1,17 @@
+server {
+    listen 80;
+    server_name www.chriswait.net;
+
+    error_log /var/log/nginx/error.log;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+
+    location / {
+        proxy_pass http://localhost:8003;
+    }
+
+    location /static/ {
+        autoindex on;
+        alias /home/ubuntu/personal-site/static/;
+    }
+}

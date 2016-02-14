@@ -26,7 +26,7 @@ var node_modules_css = [
     node_modules + "/angular-material/angular-material.css"
 ];
 
-var dist = 'dist';
+var dist = 'static/dist';
 var vendor_js = "vendor.js";
 var vendor_css = "vendor.css";
 var js = "index.js";
