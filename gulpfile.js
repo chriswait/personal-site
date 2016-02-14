@@ -12,7 +12,8 @@ var stylish = require('jshint-stylish');
 var app = 'app';
 var app_js = [app + '/**/*.js', "!" + app + '/templates.js'];
 var app_html = app + '/**/*.html';
-var app_scss = app + '/**/*.scss';
+var app_scss = app + '/app.scss';
+var app_module_scss = app + '/**/*.scss';
 
 var node_modules = "node_modules";
 var node_modules_js = [
@@ -82,6 +83,7 @@ gulp.task('watch', function() {
     gulp.watch(app_html, ['templates']);
     gulp.watch(app_js, ['lint', 'js']);
     gulp.watch(app_scss, ['sass']);
+    gulp.watch(app_module_scss, ['sass']);
 });
 
 // Default
