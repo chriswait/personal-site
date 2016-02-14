@@ -1,18 +1,26 @@
 header {
     background-color: $off-white;
+
     .navigation {
         height: 50px;
         max-width: 800px;
         margin: 0 auto;
+
+        .nav-link {
+            margin: 0px 10px;
+        }
     }
 }
 
-.nav-link {
-    margin: 0px 10px;
-}
-
-.block {
-    padding: 50px 10px;
+.section {
+    padding: 36px 10px;
+    .section-content {
+        padding: 12px 12px;
+    }
+    .section-link-container {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 #hero {
@@ -23,3 +31,4 @@ header {
 #about {
     background-color: $section-background;
 }
+
