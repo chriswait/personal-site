@@ -1,8 +1,13 @@
+*.pyc
 .DS_Store
 .*.sw*
 *.log
 
 node_modules/
 tmp
+
+venv
+manage.py
+db.sqlite3
 
 app/templates.js
