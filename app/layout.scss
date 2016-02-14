@@ -5,18 +5,19 @@ header {
 
     .navigation {
         height: 50px;
+        margin: 0px auto;
         max-width: 800px;
-        margin: 0 auto;
 
-        .nav-link {
-            margin: 0px 10px;
+        .nav-text, .nav-link {
+            padding: 0px 10px;
+            @media screen and (max-width: $break-gt-xs) { padding: 0px 5px; }
         }
     }
 }
 
 .section {
     padding: 36px 10px;
-    .section-content {
+    .section-title, .section-content {
         padding: 12px 12px;
     }
     .item {
