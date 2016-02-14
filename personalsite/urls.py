@@ -16,7 +16,19 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from rest_framework import routers
+project_router = routers.DefaultRouter()
+
+from blog.serializers import PostSerializer
+from blog.viewsets import PostViewSet
+project_router.register(r'posts', PostViewSet)
+
+from work.serializers import WorkSerializer
+from work.viewsets import WorkViewSet
+project_router.register(r'works', WorkViewSet)
+
 urlpatterns = [
+    url(r'^api/', include(project_router.urls)),
     url(r'^blog/', include('blog.urls')),
     url(r'^work/', include('work.urls')),
     url(r'^admin/', include(admin.site.urls)),
