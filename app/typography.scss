@@ -22,7 +22,6 @@ html {
 .section-title {
     color: $text;
     font-family: "AvenirNext-Bold";
-    font-size: 28px;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 28px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 34px; }
     @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 42px; }
@@ -31,7 +30,6 @@ html {
 
 .section-content, .item-content  {
     color: $text;
-    font-size: 24px;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 22px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 26px; }
     @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 28px; }
@@ -41,7 +39,6 @@ html {
 .section-link {
     color: $accent;
     font-family: "AvenirNext-Regular";
-    font-size: 24px;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 26px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 32px; }
     @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 34px; }
@@ -53,11 +50,22 @@ html {
     .item-title, .item-date  {
         color: $accent-secondary;
         font-family: "AvenirNext-Bold";
-        font-size: 24px;
         @media screen and (max-width: $break-gt-xs)                             { font-size: 22px; }
         @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 24px; }
         @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 32px; }
         @media screen and (min-width: $break-lg)                                { font-size: 38px; }
+    }
+    .item-link  {
+        color: $accent-secondary;
+        div { font-family: "AvenirNext-Bold"; }
+        a {
+            font-family: "AvenirNext-Regular";
+            @media screen and (min-width: $break-gt-xs)                         { padding: 0px 10px; }
+        }
+        @media screen and (max-width: $break-gt-xs)                             { font-size: 22px; }
+        @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 26px; }
+        @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 28px; }
+        @media screen and (min-width: $break-lg)                                { font-size: 28px; }
     }
 }
 
@@ -73,7 +81,6 @@ html {
 .footer-button {
     color: $white;
     font-family: "AvenirNext-Bold";
-    font-size: 34px;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 22px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 26px; }
     @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 28px; }

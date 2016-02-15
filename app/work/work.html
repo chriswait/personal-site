@@ -9,5 +9,15 @@
             <span ng-if="!work.date_to">Current</span>
         </h2>
     </div>
+
     <div class='item-content' ng-bind-html='work.description'></div>
+
+    <div ng-if="work.url" class='item-link' layout-xs="column" layout="row">
+        <div>Project:</div>
+        <a ng-href='{{ ::work.url }}'>{{ ::work.url }}</a>
+    </div>
+    <div ng-if="work.github_url" class='item-link' layout-xs="column" layout="row">
+        <div>Github:</div>
+        <a ng-href='{{ ::work.github_url }}'>{{ ::work.github_url }}</a>
+    </div>
 </div>

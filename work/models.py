@@ -6,6 +6,7 @@ class Work(models.Model):
     title = models.CharField(null=True, max_length=50)
     description = models.TextField(null=True)
     url = models.URLField(null=True, blank=True)
+    github_url = models.URLField(null=True, blank=True)
     date_from = models.DateField(null=True, blank=True)
     date_to = models.DateField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
