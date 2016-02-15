@@ -1,6 +1,7 @@
 Django==1.9.2
 Pillow==3.1.1
 argparse==1.2.1
+django-summernote==0.7.3
 djangorestframework==3.3.2
 gunicorn==19.4.5
 wsgiref==0.1.2

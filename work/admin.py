@@ -1,4 +1,9 @@
 from django.contrib import admin
+from django_summernote.admin import SummernoteModelAdmin
 
 from .models import Work
-admin.site.register(Work)
+
+class WorkAdmin(SummernoteModelAdmin):
+    pass
+
+admin.site.register(Work, WorkAdmin)

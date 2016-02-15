@@ -30,9 +30,10 @@ from work.viewsets import WorkViewSet
 project_router.register(r'works', WorkViewSet)
 
 urlpatterns = [
-    url(r'^api/', include(project_router.urls)),
     url(r'^$', views.index, name='index'),
     url(r'^blog/', include('blog.urls')),
     url(r'^work/', include('work.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^api/', include(project_router.urls)),
+    url(r'^summernote/', include('django_summernote.urls')),
 ]

@@ -9,7 +9,5 @@
             <span ng-if="!work.date_to">Current</span>
         </h2>
     </div>
-    <div class='item-content'>
-        {{ ::work.description }}
-    </div>
+    <div class='item-content' ng-bind-html='work.description'></div>
 </div>

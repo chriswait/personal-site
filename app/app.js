@@ -1,4 +1,4 @@
-var app = angular.module("personalSite", ['templates', 'ngMaterial']);
+var app = angular.module("personalSite", ['templates', 'ngMaterial', 'ngSanitize']);
 
 app.controller('MainController', function($scope, $document, $timeout) {
         $scope.scrollToId = function(id) {
