@@ -19,4 +19,9 @@ server {
         autoindex on;
         alias /home/ubuntu/personal-site/venv/lib/python2.7/site-packages/django/contrib/admin/static/admin/;
     }
+
+    location /static/django_summernote {
+        autoindex on;
+        alias /home/ubuntu/personal-site/venv/lib/python2.7/site-packages/django_summernote/static/django_summernote/;
+    }
 }
