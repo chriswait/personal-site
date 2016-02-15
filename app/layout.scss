@@ -80,7 +80,7 @@ section {
     }
 }
 
-#about, #work {
+section:nth-child(even) {
     background-color: $section-background;
 }
 
