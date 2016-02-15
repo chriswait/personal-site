@@ -14,12 +14,12 @@
     <body ng-cloak ng-controller='MainController'>
         <header>
             <div class='navigation' layout='row' layout-align='center center'>
-                <h1 flex='noshrink' class='nav-text'>Chris Wait</h1>
+                <h1 flex='noshrink' class='nav-text'><a href='/'>Chris Wait</a></h1>
                 <span flex></span>
                 <nav layout='row'>
-                    <h2><a class='nav-link' href='#' ng-click='scrollToId("blog")'>Blog</a></h2>
-                    <h2><a class='nav-link' href='#' ng-click='scrollToId("work")'>Work</a></h2>
-                    <h2><a class='nav-link' href='#' ng-click='scrollToId("footer")'>Contact</a></h2>
+                    <h2><a class='nav-link' href='/blog'>Blog</a></h2>
+                    <h2><a class='nav-link' href='/work'>Work</a></h2>
+                    <h2><a class='nav-link' ng-click='scrollToId("footer")'>Contact</a></h2>
                 </nav>
             </div>
         </header>
