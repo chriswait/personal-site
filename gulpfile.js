@@ -89,3 +89,4 @@ gulp.task('watch', function() {
 
 // Default
 gulp.task('default', ['vendor-js', 'vendor-css', 'templates', 'lint', 'js', 'sass', 'watch']);
+gulp.task('build', ['vendor-js', 'vendor-css', 'templates', 'js', 'sass']);
