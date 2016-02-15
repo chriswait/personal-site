@@ -6,6 +6,12 @@ angular.module("personalSite")
         },
     };
 })
+.controller("BlogController", function($scope, PostService) {
+        PostService.load_posts()
+        .then(function(data) {
+            $scope.posts = PostService.data.posts;
+        });
+})
 .factory('PostService', function($http, $q) {
     var postsServiceInstance;
     var data = {

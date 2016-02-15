@@ -1,9 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-    <div id='hero'>
-        <h1 id='hero-title'>I make stuff</h1>
-    </div>
-
     <section id='about'>
         <div class='content'>
             <h1 class='section-title'>About</h1>
@@ -18,7 +14,7 @@
         </div>
     </section>
 
-    <section id='blog'>
+    <section id='blog' ng-controller="BlogController">
         <div class='content'>
             <h1 class='section-title'>Blog</h1>
             <blog ng-repeat="post in posts"></blog>
@@ -28,7 +24,7 @@
         </div>
     </section>
 
-    <section id='work'>
+    <section id='work' ng-controller="WorkController">
         <div class='content'>
             <h1 class='section-title'>Work</h1>
             <work ng-repeat="work in works"></work>

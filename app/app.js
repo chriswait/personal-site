@@ -1,6 +1,6 @@
 var app = angular.module("personalSite", ['templates', 'ngMaterial']);
 
-app.controller('MainController', function($scope, $document, $timeout, PostService, WorkService) {
+app.controller('MainController', function($scope, $document, $timeout) {
         $scope.scrollToId = function(id) {
             var element = $document[0].getElementById(id);
             if (angular.isDefined(element)) {
@@ -13,13 +13,5 @@ app.controller('MainController', function($scope, $document, $timeout, PostServi
                 });
             }
         };
-        PostService.load_posts()
-        .then(function(data) {
-            $scope.posts = PostService.data.posts;
-        });
-        WorkService.load_works()
-        .then(function(data) {
-            $scope.works = WorkService.data.works;
-        });
 })
 ;

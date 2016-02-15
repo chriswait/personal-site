@@ -6,6 +6,12 @@ angular.module("personalSite")
         },
     };
 })
+.controller("WorkController", function($scope, WorkService) {
+        WorkService.load_works()
+        .then(function(data) {
+            $scope.works = WorkService.data.works;
+        });
+})
 .factory('WorkService', function($http, $q) {
     var worksServiceInstance;
     var data = {

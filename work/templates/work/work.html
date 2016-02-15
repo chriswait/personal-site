@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Work{% endblock %}
+{% block hero %}Work{% endblock %}
+{% block content %}
+    <section id='work' ng-controller="WorkController">
+        <div class='content'>
+            <h1 class='section-title'>Work</h1>
+            <work ng-repeat="work in works"></work>
+            <div class='section-link-container'>
+                <a class='section-link' href='#'>More work...</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
