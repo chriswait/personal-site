@@ -25,7 +25,8 @@
         </header>
 
         <main>
-        <div id='hero'>
+
+        <div id='hero' class="{% if request.path = '/' %}index-hero{% endif %}">
             <h1 id='hero-title'>{% block hero %}I make stuff{% endblock %}</h1>
         </div>
         {% block content %}{% endblock %}
@@ -43,4 +44,3 @@
         <script src='{% static "dist/index.js" %}'></script>
     </body>
 </html>
-

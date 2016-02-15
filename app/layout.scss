@@ -73,8 +73,11 @@ section {
 }
 
 #hero {
-    padding: 120px 0px;
     text-align: center;
+    padding: 60px 0px;
+    &.index-hero {
+        padding: 120px 0px;
+    }
 }
 
 #about, #work {
