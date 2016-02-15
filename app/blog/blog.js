@@ -7,7 +7,7 @@ angular.module("personalSite")
     };
 })
 .controller("BlogController", function($scope, PostService) {
-        PostService.load_posts()
+        PostService.load_recent_posts()
         .then(function(data) {
             $scope.posts = PostService.data.posts;
         });
@@ -16,9 +16,9 @@ angular.module("personalSite")
     var postsServiceInstance;
     var data = {
     };
-    var load_posts = function() {
+    var load_posts = function(url) {
         var deferred = $q.defer();
-        $http.get("/api/posts")
+        $http.get(url)
         .then(function(success_response) {
             data.posts = success_response.data;
             deferred.resolve(data.posts);
@@ -27,9 +27,19 @@ angular.module("personalSite")
         });
         return deferred.promise;
     };
+    var load_all_posts = function() {
+        var url = "/api/posts";
+        return load_posts(url);
+    };
+    var load_recent_posts = function() {
+        var url = "/api/recent-posts";
+        return load_posts(url);
+    };
+
     postsServiceInstance = {
         data: data,
-        load_posts: load_posts,
+        load_all_posts: load_all_posts,
+        load_recent_posts: load_recent_posts,
     };
     return postsServiceInstance;
 })
