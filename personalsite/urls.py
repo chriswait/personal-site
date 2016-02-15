@@ -31,6 +31,7 @@ project_router.register(r'works', WorkViewSet)
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^about/$', views.about, name='about'),
     url(r'^blog/', include('blog.urls')),
     url(r'^work/', include('work.urls')),
     url(r'^admin/', include(admin.site.urls)),
