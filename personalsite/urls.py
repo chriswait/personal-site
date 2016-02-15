@@ -22,12 +22,14 @@ from rest_framework import routers
 project_router = routers.DefaultRouter()
 
 from blog.serializers import PostSerializer
-from blog.viewsets import PostViewSet
+from blog.viewsets import PostViewSet, RecentPostViewSet
 project_router.register(r'posts', PostViewSet)
+project_router.register(r'recent-posts', RecentPostViewSet)
 
 from work.serializers import WorkSerializer
-from work.viewsets import WorkViewSet
+from work.viewsets import WorkViewSet, FrontWorkViewSet
 project_router.register(r'works', WorkViewSet)
+project_router.register(r'front-works', FrontWorkViewSet)
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),

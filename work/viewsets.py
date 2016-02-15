@@ -11,3 +11,7 @@ class WorkViewSet(viewsets.ModelViewSet):
             work = Work.objects.get(pk=pk)
             serializer = WorkSerializer(work)
             return Response(serializer.data)
+
+class FrontWorkViewSet(viewsets.ModelViewSet):
+    queryset = Work.objects.filter(front_page=True)
+    serializer_class = WorkSerializer

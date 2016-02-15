@@ -11,3 +11,7 @@ class PostViewSet(viewsets.ModelViewSet):
             post = Post.objects.get(pk=pk)
             serializer = PostSerializer(post)
             return Response(serializer.data)
+
+class RecentPostViewSet(viewsets.ModelViewSet):
+    queryset = Post.objects.all().order_by('-date')[:3]
+    serializer_class = PostSerializer

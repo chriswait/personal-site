@@ -9,6 +9,7 @@ class Work(models.Model):
     date_from = models.DateField(null=True, blank=True)
     date_to = models.DateField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
+    front_page = models.NullBooleanField(null=True, blank=True)
 
     def __unicode__(self):
         return u'%s' % (self.title)
