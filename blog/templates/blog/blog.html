@@ -2,7 +2,7 @@
 {% block title %}Blog{% endblock %}
 {% block hero %}Blog{% endblock %}
 {% block content %}
-    <section id='blog' ng-controller="BlogController">
+    <section id='blog' ng-controller="BlogController" data-query="all">
         <div class='content'>
             <blog ng-repeat="post in posts"></blog>
         </div>

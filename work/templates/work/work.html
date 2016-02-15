@@ -2,7 +2,7 @@
 {% block title %}Work{% endblock %}
 {% block hero %}Work{% endblock %}
 {% block content %}
-    <section id='work' ng-controller="WorkController">
+    <section id='work' ng-controller="WorkController" query="front">
         <div class='content'>
             <work ng-repeat="work in works"></work>
         </div>

@@ -6,11 +6,21 @@ angular.module("personalSite")
         },
     };
 })
-.controller("BlogController", function($scope, PostService) {
-        PostService.load_recent_posts()
-        .then(function(data) {
-            $scope.posts = PostService.data.posts;
-        });
+.controller("BlogController", function($scope, $attrs, PostService) {
+        var load_posts_function;
+        if (angular.isDefined($attrs.query)) {
+            if ($attrs.query === "all") {
+                    load_posts_function = PostService.load_all_posts;
+            } else if ($attrs.query === "recent") {
+                    load_posts_function = PostService.load_recent_posts;
+            }
+        }
+        if (angular.isDefined(load_posts_function)) {
+            load_posts_function()
+            .then(function(data) {
+                $scope.posts = PostService.data.posts;
+            });
+        }
 })
 .factory('PostService', function($http, $q) {
     var postsServiceInstance;
