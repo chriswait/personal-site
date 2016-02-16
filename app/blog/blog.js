@@ -7,12 +7,16 @@ angular.module("personalSite")
     };
 })
 .controller("BlogController", function($scope, $attrs, PostService) {
+        $scope.viewModel = {
+        };
         var load_posts_function;
         if (angular.isDefined($attrs.query)) {
             if ($attrs.query === "all") {
                     load_posts_function = PostService.load_all_posts;
+                    $scope.viewModel.showText = true;
             } else if ($attrs.query === "recent") {
                     load_posts_function = PostService.load_recent_posts;
+                    $scope.viewModel.showPreview = true;
             }
         }
         if (angular.isDefined(load_posts_function)) {
