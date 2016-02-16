@@ -114,3 +114,8 @@ REST_FRAMEWORK = {
     ],
 }
 
+# Try to load local settings
+try:
+    from local_settings import *
+except ImportError:
+    pass
