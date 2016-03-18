@@ -1,3 +1,9 @@
+# Personal Site
+A Django-powered portfolio/blogging platform I built for personal use. AngularJS & Angular Material frontend.
+Allows the following functionality:
+* Curating of a portfolio of work, attaching images/github links etc
+* Blogging with a rich text editor
+
 # Install
 npm install
 gulp
