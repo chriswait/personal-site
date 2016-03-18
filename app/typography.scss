@@ -11,7 +11,7 @@ html {
 }
 
 #hero-title {
-    color: $accent;
+    color: $off-white;
     font-family: "AvenirNext-Bold", sans-serif;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 42px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 72px; }
