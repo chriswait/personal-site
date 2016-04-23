@@ -13,10 +13,10 @@ html {
 #hero-title {
     color: $off-white;
     font-family: "AvenirNext-Bold", sans-serif;
-    @media screen and (max-width: $break-gt-xs)                             { font-size: 42px; }
+    @media screen and (max-width: $break-gt-xs)                             { font-size: 56px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 72px; }
     @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 84px; }
-    @media screen and (min-width: $break-lg)                                { font-size: 112px; }
+    @media screen and (min-width: $break-lg)                                { font-size: 92px; }
 }
 
 .section-title {
@@ -31,9 +31,9 @@ html {
 .section-content, .item-content  {
     color: $text;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 22px; }
-    @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 26px; }
-    @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 28px; }
-    @media screen and (min-width: $break-lg)                                { font-size: 28px; }
+    @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 22px; }
+    @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 22px; }
+    @media screen and (min-width: $break-lg)                                { font-size: 22px; }
 }
 
 .section-link {
@@ -52,20 +52,19 @@ html {
         font-family: "AvenirNext-Bold", sans-serif;
         @media screen and (max-width: $break-gt-xs)                             { font-size: 22px; }
         @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 24px; }
-        @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 32px; }
-        @media screen and (min-width: $break-lg)                                { font-size: 38px; }
+        @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 28px; }
+        @media screen and (min-width: $break-lg)                                { font-size: 28px; }
     }
     .item-link  {
+        font-family: "AvenirNext-Regular", sans-serif;
         color: $accent-secondary;
-        div { font-family: "AvenirNext-Bold", sans-serif; }
         a {
-            font-family: "AvenirNext-Regular", sans-serif;
             @media screen and (min-width: $break-gt-xs)                         { padding: 0px 10px; }
         }
         @media screen and (max-width: $break-gt-xs)                             { font-size: 22px; }
-        @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 26px; }
-        @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 28px; }
-        @media screen and (min-width: $break-lg)                                { font-size: 28px; }
+        @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 22px; }
+        @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 24px; }
+        @media screen and (min-width: $break-lg)                                { font-size: 24px; }
     }
 }
 
