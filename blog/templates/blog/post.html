@@ -4,7 +4,7 @@
             <h2 class='item-title'>{{post.title}}</h2>
         </a>
         <span flex></span>
-        <h2 class='item-date'>{{post.date}}</h2>
+        <h2 class='item-date'>{{post.date|date:"b 'y"}}</h2>
     </div>
     {% if preview %}
         <div class='item-content'>{{post.preview|safe}}</div>

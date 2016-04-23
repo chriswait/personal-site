@@ -6,12 +6,12 @@
         <span flex></span>
         {% if work.date_from %}
             <h2 class='item-date'>
-                <span>{{work.date_from}}</span>
+                <span>{{work.date_from|date:"b 'y"}}</span>
                 <span> - </span>
                 {% if work.date_to %}
-                    <span>{{work.date_to}}</span>
+                    <span>{{work.date_to|date:"b 'y"}}</span>
                 {% else %}
-                    <span>Current</span>
+                    <span>current</span>
                 {% endif %}
             </h2>
         {% endif %}
