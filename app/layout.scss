@@ -1,4 +1,9 @@
-html, body { max-width: 100%; overflow-x: hidden; }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden
+    -webkit-overflow-scrolling: touch;
+}
+
 main {
     @media screen and (max-width: $break-gt-xs) {
         margin-top: 50px;
