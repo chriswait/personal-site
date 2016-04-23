@@ -1,0 +1,34 @@
+<div class='item'>
+    <div class='item-header' layout-xs='column' layout-gt-sm='row'>
+        <a href="{{work.id}}">
+            <h2 class='item-title'>{{work.title}}</h2>
+        </a>
+        <span flex></span>
+        {% if work.date_from %}
+            <h2 class='item-date'>
+                <span>{{work.date_from}}</span>
+                <span> - </span>
+                {% if work.date_to %}
+                    <span>{{work.date_to}}</span>
+                {% else %}
+                    <span>Current</span>
+                {% endif %}
+            </h2>
+        {% endif %}
+    </div>
+
+    <div class='item-content'>{{work.description|safe}}</div>
+
+    {% if work.url %}
+        <div class='item-link' layout-xs="column" layout="row">
+            <div>Project:</div>
+            <a href='{{work.url}}'>{{work.url}}</a>
+        </div>
+    {% endif %}
+    {% if work.github_url %}
+    <div class='item-link' layout-xs="column" layout="row">
+        <div>Github:</div>
+        <a href='{{work.github_url}}'>{{work.github_url}}</a>
+    </div>
+    {% endif %}
+</div>

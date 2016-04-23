@@ -6,14 +6,7 @@
         <div class='content'>
         {% if posts %}
             {% for post in posts %}
-                <div class='item'>
-                    <div class='item-header' layout-xs='column' layout-gt-sm='row'>
-                        <h2 class='item-title'>{{post.title}}</h2>
-                        <span flex></span>
-                        <h2 class='item-date'>{{ post.date}}</h2>
-                    </div>
-                    <div class='item-content'>{{post.text|safe}}</div>
-                </div>
+                {% include "blog/post.html" %}
             {% endfor %}
         {% else %}
             <div> no posts</div>
