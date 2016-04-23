@@ -74,6 +74,7 @@ section {
 
 #hero {
     background-color: $accent;
+    background: linear-gradient($accent, $section-background);
     text-align: center;
     padding: 60px 0px;
     &.index-hero {
