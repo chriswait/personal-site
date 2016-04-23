@@ -4,13 +4,13 @@
 {% block content %}
     <section id='blog'>
         <div class='content'>
-        {% if posts %}
-            {% for post in posts %}
-                {% include "blog/post.html" %}
-            {% endfor %}
-        {% else %}
-            <div> no posts</div>
-        {% endif %}
+            {% if posts %}
+                {% for post in posts %}
+                    {% include "blog/post.html" %}
+                {% endfor %}
+            {% else %}
+                <div> no posts</div>
+            {% endif %}
         </div>
     </section>
 {% endblock %}
