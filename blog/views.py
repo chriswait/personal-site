@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from models import Post
 
 def index(request):
-    posts = Post.objects.all().order_by('-date')
+    posts = Post.objects.filter(is_published=True).order_by('-date')
     return render(request, 'blog/blog.html', {"posts": posts, "preview": True})
 
 def post(request, post_id):
