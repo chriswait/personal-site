@@ -23,7 +23,12 @@ main {
     @media screen and (min-width: $break-md) and (max-width: $break-gt-md) {
         padding: 48px 0px;
     }
-    @media screen and (min-width: $break-lg) {
+    @media screen and (min-width: $break-lg) and (max-width: $break-gt-lg) {
+        max-width: 70%;
+        padding: 48px 0px;
+    }
+    @media screen and (min-width: $break-xl) {
+        max-width: 60%;
         padding: 48px 0px;
     }
 }
