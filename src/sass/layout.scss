@@ -1,6 +1,10 @@
+@import 'breakpoints';
+@import 'colours';
+
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    margin: 0;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -43,17 +47,24 @@ header {
         border-bottom: 1px solid darkgray;
     }
 
-    .navigation {
-        height: 50px;
-        margin: 0px auto;
-        margin: 0 auto;
-        max-width: 80%;
+    nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
-        .nav-text, .nav-link {
-            padding: 0px 10px;
-            @media screen and (max-width: $break-gt-xs) { padding: 0px 5px; }
-        }
+      margin: 0px auto;
+      height: 50px;
+      max-width: 80%;
+
+      a {
+        padding: 0px 10px;
+        @media screen and (max-width: $break-gt-xs) { padding: 0px 5px; }
+      }
     }
+}
+
+.space {
+  flex-grow: 1;
 }
 
 section {
