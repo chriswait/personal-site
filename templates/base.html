@@ -1,15 +1,10 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html ng-app='personalSite'>
+<html>
     <head>
         <title>{% block title %}Chris Wait{% endblock %}</title>
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
-        <!-- VENDOR -->
-        <link rel='stylesheet' href='{% static "dist/vendor.css" %}'>
-        <script src='{% static "dist/vendor.js" %}'></script>
-
-        <link rel='stylesheet' href='{% static "dist/index.css" %}'>
-        <script src='{% static "dist/templates.js" %}'></script>
+        <link rel='stylesheet' href='{% static "dist/app.css" %}'>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -19,25 +14,22 @@
             ga('send', 'pageview');
         </script>
     </head>
-    <body ng-cloak>
+    <body>
         <header>
-            <div class='navigation' layout='row' layout-align='center center'>
-                <h1 flex='noshrink' class='nav-text'><a href='/'>Chris Wait</a></h1>
-                <span flex></span>
-                <nav layout='row'>
-                    <h2><a class='nav-link' href='/blog'>Blog</a></h2>
-                    <h2><a class='nav-link' href='/work'>Work</a></h2>
-                    <h2><a class='nav-link' ng-click='scrollToId("footer")'>Contact</a></h2>
-                </nav>
-            </div>
+            <nav>
+                <h2><a href='/'>Chris Wait</a></h2>
+                <span class='space'></span>
+                <h2><a href='/blog'>Blog</a></h2>
+                <h2><a href='/work'>Work</a></h2>
+                <h2><a onclick='scrollToId("footer")'>Contact</a></h2>
+            </nav>
         </header>
 
         <main>
-
-        <div id='hero' class="{% if request.path = '/' %}index-hero{% endif %}">
-            <h1 id='hero-title'>{% block hero %}I make stuff{% endblock %}</h1>
-        </div>
-        {% block content %}{% endblock %}
+            <div id='hero' class="{% if request.path = '/' %}index-hero{% endif %}">
+                <h1 id='hero-title'>{% block hero %}I make stuff{% endblock %}</h1>
+            </div>
+            {% block content %}{% endblock %}
         </main>
 
         <footer id="footer">
@@ -49,6 +41,6 @@
             </a>
         </footer>
 
-        <script src='{% static "dist/index.js" %}'></script>
+        <script src='{% static "dist/app.js" %}'></script>
     </body>
 </html>
