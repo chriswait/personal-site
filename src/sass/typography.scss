@@ -66,7 +66,6 @@ html {
         font-family: "AvenirNext-Regular", sans-serif;
         a {
             color: $external-link;
-            @media screen and (min-width: $break-gt-xs)                         { padding: 0px 10px; }
         }
         @media screen and (max-width: $break-gt-xs)                             { font-size: 22px; }
         @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 22px; }

@@ -1,5 +1,5 @@
 <div class='item'>
-    <div class='item-header' layout-xs='column' layout-gt-sm='row'>
+    <div class='item-header'>
         <a href="/work/{{work.id}}/">
             <h2 class='item-title'>{{work.title}}</h2>
         </a>
@@ -20,13 +20,13 @@
     <div class='item-content'>{{work.description|safe}}</div>
 
     {% if work.url %}
-        <div class='item-link' layout-xs="column" layout="row">
+        <div class='item-link'>
             <div>Project:</div>
             <a href='{{work.url}}'>{{work.url}}</a>
         </div>
     {% endif %}
     {% if work.github_url %}
-    <div class='item-link' layout-xs="column" layout="row">
+    <div class='item-link'>
         <div>Github:</div>
         <a href='{{work.github_url}}'>{{work.github_url}}</a>
     </div>
