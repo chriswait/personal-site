@@ -71,8 +71,20 @@ section {
     .section-item, .section-title {
         padding: 12px 0px;
     }
+    .item-header, .item-link {
+        display: flex;
+        flex-direction: row;
+        @media screen and (max-width: $break-gt-xs) {
+          flex-direction: column
+        }
+    }
     .item-header {
         padding: 12px 0px;
+    }
+    .item-link {
+      @media screen and (min-width: $break-gt-xs) {
+        padding: 0px 10px;
+      }
     }
 
     .section-link-container {
