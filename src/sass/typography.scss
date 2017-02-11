@@ -2,7 +2,7 @@
 @import 'breakpoints';
 
 html {
-    font-family: "AvenirNext-Regular", sans-serif;
+    font-family: 'Inconsolata', monospace;
 }
 
 .nav-text, .nav-link {
@@ -16,7 +16,7 @@ html {
 #hero-title {
     color: $off-white;
     text-shadow: 1px 1px $text;
-    font-family: "AvenirNext-Bold", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 56px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 72px; }
     @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 84px; }
@@ -25,7 +25,8 @@ html {
 
 .section-title {
     color: $text;
-    font-family: "AvenirNext-Bold", sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 28px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 34px; }
     @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 42px; }
@@ -77,6 +78,7 @@ html {
 .footer-text {
     color: $accent;
     font-size: 38px;
+    font-family: 'Montserrat', sans-serif;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 34px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 42px; }
     @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 42px; }
@@ -85,7 +87,7 @@ html {
 
 .footer-button {
     color: $white;
-    font-family: "AvenirNext-Bold", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 22px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 26px; }
     @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 28px; }
