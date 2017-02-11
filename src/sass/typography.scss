@@ -79,6 +79,7 @@ html {
 .footer-text {
     color: $accent;
     font-size: 38px;
+    font-family: 'Montserrat', sans-serif;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 34px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 42px; }
     @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 42px; }
