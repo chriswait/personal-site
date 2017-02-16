@@ -15,12 +15,10 @@ html {
 
 #hero-title {
     color: $off-white;
-    text-shadow: 1px 1px $text;
     font-family: 'Montserrat', sans-serif;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 56px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 72px; }
-    @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 84px; }
-    @media screen and (min-width: $break-lg)                                { font-size: 92px; }
+    @media screen and (min-width: $break-md)                                { font-size: 76px; }
 }
 
 .section-title {
@@ -35,7 +33,14 @@ html {
 
 .section-content, .item-content  {
     color: $text;
-    @media screen and (max-width: $break-gt-xs)                             { font-size: 22px; }
+    text-align: justify;
+    line-height: 1.4;
+    @media screen and (max-width: $break-gt-xs)                             {
+      font-size: 22px;
+      ul {
+        padding-left: 20px;
+      }
+    }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 22px; }
     @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 22px; }
     @media screen and (min-width: $break-lg)                                { font-size: 22px; }
