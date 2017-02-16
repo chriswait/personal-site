@@ -18,28 +18,32 @@
     <body>
         <header>
             <nav>
-                <h2><a href='/'>Chris Wait</a></h2>
+                <h2><a href='/'>Chris</a></h2>
                 <span class='space'></span>
                 <h2><a href='/blog'>Blog</a></h2>
                 <h2><a href='/work'>Work</a></h2>
-                <h2><a onclick='scrollToId("footer")'>Contact</a></h2>
+                <!-- <h2><a onclick='scrollToId("footer")'>Contact</a></h2> -->
             </nav>
         </header>
 
         <main>
-            <div id='hero' class="{% if request.path = '/' %}index-hero{% endif %}">
-                <h1 id='hero-title'>{% block hero %}I make stuff{% endblock %}</h1>
+            <div id='hero' class="index-hero">
+                <div class='content'>
+                    <h1 id='hero-title'>{% block hero %}make something better{% endblock %}</h1>
+                </div>
             </div>
             {% block content %}{% endblock %}
         </main>
 
         <footer id="footer">
-            <h1 class='footer-text'>Interested in working together?</h1>
+            <h1 class='footer-text'>{ }</h1>
+            <div class='copyright'>© 2017 Chris Wait</div>
+            <!-- <h1 class='footer-text'>Interested in working together?</h1>
             <a href='mailto:chris@chriswait.net?Subject=Hello!'>
                 <div class='footer-button'>
                     <span>Email me</span>
                 </div>
-            </a>
+            </a> -->
         </footer>
 
         <script src='{% static "dist/app.js" %}'></script>

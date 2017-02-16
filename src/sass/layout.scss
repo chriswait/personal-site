@@ -8,35 +8,6 @@ html, body {
     -webkit-overflow-scrolling: touch;
 }
 
-main {
-    @media screen and (max-width: $break-gt-xs) {
-        margin-top: 50px;
-    }
-}
-
-.content {
-    margin: 0 auto;
-    max-width: 80%;
-    @media screen and (max-width: $break-gt-xs) {
-        max-width: 90%;
-        padding: 12px 6px;
-    }
-    @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm) {
-        padding: 24px 0px;
-    }
-    @media screen and (min-width: $break-md) and (max-width: $break-gt-md) {
-        padding: 48px 0px;
-    }
-    @media screen and (min-width: $break-lg) and (max-width: $break-gt-lg) {
-        max-width: 70%;
-        padding: 48px 0px;
-    }
-    @media screen and (min-width: $break-xl) {
-        max-width: 60%;
-        padding: 48px 0px;
-    }
-}
-
 header {
     background-color: $off-white;
     @media screen and (max-width: $break-gt-xs) {
@@ -63,6 +34,48 @@ header {
     }
 }
 
+
+main {
+    @media screen and (max-width: $break-gt-xs) {
+        margin-top: 50px;
+    }
+}
+
+#hero {
+    background-color: $accent;
+    text-align: center;
+    padding: 60px 0px;
+    &.index-hero {
+        padding: 120px 0px;
+    }
+}
+
+
+.content {
+    margin: 0 auto;
+    max-width: 80%;
+    @media screen and (max-width: $break-gt-xs) {
+        max-width: 90%;
+    }
+    @media screen and (min-width: $break-lg) and (max-width: $break-gt-lg) {
+        max-width: 70%;
+    }
+    @media screen and (min-width: $break-xl) {
+        max-width: 60%;
+    }
+}
+section .content {
+    @media screen and (max-width: $break-gt-xs) {
+        padding: 12px 6px;
+    }
+    @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm) {
+        padding: 24px 0px;
+    }
+    @media screen and (min-width: $break-md) {
+        padding: 48px 0px;
+    }
+}
+
 .space {
   flex-grow: 1;
 }
@@ -74,7 +87,7 @@ section {
     .item-header, .item-link {
         display: flex;
         flex-direction: row;
-        @media screen and (max-width: $break-gt-xs) {
+        @media screen and (max-width: $break-xs) {
           flex-direction: column
         }
     }
@@ -82,8 +95,13 @@ section {
         padding: 12px 0px;
     }
     .item-link {
-      @media screen and (min-width: $break-gt-xs) {
-        padding: 0px 10px;
+      div {
+        margin-right: 10px;
+      }
+      @media screen and (max-width: $break-xs) {
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
       }
     }
 
@@ -105,15 +123,6 @@ section {
     }
 }
 
-#hero {
-    background-color: $accent;
-    text-align: center;
-    padding: 60px 0px;
-    &.index-hero {
-        padding: 120px 0px;
-    }
-}
-
 section:nth-child(even) {
     background-color: $section-background;
 }
@@ -124,5 +133,8 @@ footer {
     padding: 60px 0px;
     @media screen and (max-width: $break-gt-xs){
         padding: 40px 0px;
+    }
+    .copyright {
+      margin-top: 20px;
     }
 }
