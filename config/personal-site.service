@@ -1,0 +1,12 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/personal-site
+ExecStart=/home/ubuntu/personal-site/venv/bin/gunicorn --workers 3 --bind 127.0.0.1:8003 personalsite.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
