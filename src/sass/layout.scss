@@ -22,6 +22,7 @@ header {
       display: flex;
       flex-direction: row;
       align-items: center;
+      justify-content: space-between;
 
       margin: 0px auto;
       height: 50px;
@@ -76,10 +77,6 @@ section .content {
     }
 }
 
-.space {
-  flex-grow: 1;
-}
-
 section {
     .section-item, .section-title {
         padding: 12px 0px;
@@ -87,6 +84,7 @@ section {
     .item-header, .item-link {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         @media screen and (max-width: $break-xs) {
           flex-direction: column
         }
