@@ -1,8 +1,11 @@
 @import 'colors';
 @import 'breakpoints';
 
-html {
-    font-family: 'Inconsolata', monospace;
+$monospace-font: 'Inconsolata', monospace;
+$header-font: 'Montserrat', sans-serif;
+
+body {
+    font-family: $monospace-font;
 }
 
 .nav-text, .nav-link {
@@ -15,7 +18,7 @@ html {
 
 #hero-title {
     color: $off-white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $header-font;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 56px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 72px; }
     @media screen and (min-width: $break-md)                                { font-size: 76px; }
@@ -23,7 +26,7 @@ html {
 
 .section-title {
     color: $text;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $header-font;
     text-align: center;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 28px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 34px; }
@@ -48,7 +51,7 @@ html {
 
 .section-link {
     color: $accent;
-    font-family: "AvenirNext-Regular", sans-serif;
+    font-family: $header-font;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 26px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 32px; }
     @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 32px; }
@@ -59,7 +62,7 @@ html {
     padding: 12px 0px;
     color: $accent-secondary;
     .item-title, .item-date  {
-        font-family: "AvenirNext-Regular", sans-serif;
+        font-family: $header-font;
         @media screen and (max-width: $break-gt-xs)                             { font-size: 22px; }
         @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 24px; }
         @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 28px; }
@@ -69,7 +72,7 @@ html {
         color: $accent;
     }
     .item-link  {
-        font-family: "AvenirNext-Regular", sans-serif;
+        font-family: $header-font;
         a {
             color: $external-link;
         }
@@ -83,7 +86,7 @@ html {
 .footer-text {
     color: $accent;
     font-size: 38px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $header-font;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 34px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 42px; }
     @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 42px; }
@@ -92,7 +95,7 @@ html {
 
 .footer-button {
     color: $white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $header-font;
     @media screen and (max-width: $break-gt-xs)                             { font-size: 22px; }
     @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm)  { font-size: 26px; }
     @media screen and (min-width: $break-md) and (max-width: $break-gt-md)  { font-size: 28px; }
