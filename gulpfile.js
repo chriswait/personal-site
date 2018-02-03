@@ -8,6 +8,7 @@ var browserSync = require('browser-sync').create();
 
 var jsPath = 'src/js/*.js';
 var sassPath = 'src/sass/*.scss';
+var templatesPath = 'templates/*.html';
 var distPath = 'static/dist/';
 
 // JS
@@ -17,10 +18,6 @@ gulp.task('js', function() {
   .pipe(eslint())
   .pipe(concat('app.js'))
   .pipe(gulp.dest(distPath));
-});
-gulp.task('js-watch', ['js'], function(done) {
-  browserSync.reload();
-  done();
 });
 
 // SASS
@@ -34,10 +31,15 @@ gulp.task('sass', function() {
   .pipe(concat('app.css'))
   .pipe(gulp.dest(distPath));
 });
-gulp.task('sass-watch', ['sass'], function(done) {
+
+// WATCH
+var browserSyncReload = function(done) {
   browserSync.reload();
   done();
-});
+};
+gulp.task('templates-watch', browserSyncReload);
+gulp.task('js-watch', ['js'], browserSyncReload);
+gulp.task('sass-watch', ['sass'], browserSyncReload);
 
 // Build
 gulp.task('build', ['js', 'sass']);
@@ -49,4 +51,5 @@ gulp.task('default', ['build'], function() {
   });
   gulp.watch(jsPath, ['js-watch']);
   gulp.watch(sassPath, ['sass-watch']);
+  gulp.watch(templatesPath, ['templates-watch']);
 });
