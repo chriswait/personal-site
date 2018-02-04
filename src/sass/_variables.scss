@@ -1,4 +1,10 @@
-@import 'breakpoints';
+$accent: #F15E32;
+$section-background: #d4e6ec;
+$off-white: #f5f5f5;
+$accent-secondary: #484F54;
+$white: #ffffff;
+$text: #414141;
+$external-link: black;
 
 $spacing-xs: 6px;
 $spacing-sm: 12px;
@@ -6,6 +12,16 @@ $spacing-md: 24px;
 $spacing-lg: 36px;
 $spacing-xl: 48px;
 $spacing-xxl: 96px;
+
+$break-xs: 599px;
+$break-gt-xs: 600px;
+$break-sm: 600px;
+$break-gt-sm: 959px;
+$break-md: 960px;
+$break-gt-md: 1279px;
+$break-lg: 1280px;
+$break-gt-lg: 1599px;
+$break-xl: 1600px;
 
 @mixin responsive-content() {
     margin: 0 auto;
