@@ -1,0 +1,14 @@
+@import 'colors';
+@import 'responsive';
+
+section {
+    padding: $spacing-md 0;
+    & > h2, & > a {
+        text-align: center;
+    }
+}
+
+section:nth-child(even) {
+    background-color: $section-background;
+}
+

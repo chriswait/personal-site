@@ -29,24 +29,17 @@
             </nav>
         </header>
 
+        <section id='hero' {% if request.path == '/'%}class="index-hero"{% endif %}>
+            <h1>{% block hero %}make something better{% endblock %}</h1>
+        </section>
+
         <main>
-            <div id='hero' class="index-hero">
-                <div class='content'>
-                    <h1 id='hero-title'>{% block hero %}make something better{% endblock %}</h1>
-                </div>
-            </div>
             {% block content %}{% endblock %}
         </main>
 
         <footer id="footer">
-            <h1 class='footer-text'>{ }</h1>
-            <div class='copyright'>© {% now "Y" %} Chris Wait</div>
-            <!-- <h1 class='footer-text'>Interested in working together?</h1>
-            <a href='mailto:chris@chriswait.net?Subject=Hello!'>
-                <div class='footer-button'>
-                    <span>Email me</span>
-                </div>
-            </a> -->
+            <h3>{© {% now "Y" %} Chris Wait}</h3>
+            <a href='mailto:chris@chriswait.net?Subject=Hello!'><h3>Email me</h3></a>
         </footer>
 
         <script src='{% static "dist/app.js" %}'></script>

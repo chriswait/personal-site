@@ -1,13 +1,11 @@
-<div class='item'>
-    <div class='item-header'>
-        <a href="/blog/{{post.id}}/">
-            <h2 class='item-title'>{{post.title}}</h2>
-        </a>
-        <h2 class='item-date'>{{post.date|date:"b 'y"}}</h2>
+<article>
+    <div class='article-header'>
+        <a href="/blog/{{post.id}}/"><h3>{{post.title}}</h3></a>
+        <h3>{{post.date|date:"b 'y"}}</h3>
     </div>
     {% if preview %}
-        <div class='item-content'>{{post.preview|safe}}</div>
+        <div class='article-content'>{{post.preview|safe}}</div>
     {% else %}
-        <div class='item-content'>{{post.text|safe}}</div>
+        <div class='article-content'>{{post.text|safe}}</div>
     {% endif %}
-</div>
+</article>

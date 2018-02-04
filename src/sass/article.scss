@@ -1,0 +1,22 @@
+@import 'breakpoints';
+@import 'colors';
+@import 'responsive';
+
+article {
+    @include responsive-content();
+    padding-bottom: $spacing-md;
+    .article-header, .article-link {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        @media screen and (max-width: $break-xs) {
+          flex-direction: column
+        }
+    }
+    @media screen and (max-width: $break-xs) {
+        .article-link > a {
+            word-break: break-all;
+        }
+    }
+}

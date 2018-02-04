@@ -1,0 +1,19 @@
+
+@import 'colors';
+@import 'breakpoints';
+@import 'responsive';
+
+footer {
+    background-color: $off-white;
+    text-align: center;
+    padding: $spacing-lg;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+@media screen and (min-width: $break-sm) {
+    footer {
+        flex-direction: row;
+    }
+}

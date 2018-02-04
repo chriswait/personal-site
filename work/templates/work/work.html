@@ -3,14 +3,12 @@
 {% block hero %}Work{% endblock %}
 {% block content %}
     <section id='work'>
-        <div class='content'>
-            {% if works %}
-                {% for work in works %}
-                    {% include "work/work_item.html" %}
-                {% endfor %}
-            {% else %}
-                <div> no works </div>
-            {% endif %}
-        </div>
+        {% if works %}
+            {% for work in works %}
+                {% include "work/work_item.html" %}
+            {% endfor %}
+        {% else %}
+            <div> no works </div>
+        {% endif %}
     </section>
 {% endblock %}

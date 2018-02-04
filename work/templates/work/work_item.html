@@ -1,10 +1,8 @@
-<div class='item'>
-    <div class='item-header'>
-        <a href="/work/{{work.id}}/">
-            <h2 class='item-title'>{{work.title}}</h2>
-        </a>
+<article>
+    <div class='article-header'>
+        <a href="/work/{{work.id}}/"><h3>{{work.title}}</h3></a>
         {% if work.date_from %}
-            <h2 class='item-date'>
+            <h3>
                 <span>{{work.date_from|date:"b 'y"}}</span>
                 <span> - </span>
                 {% if work.date_to %}
@@ -12,22 +10,22 @@
                 {% else %}
                     <span>current</span>
                 {% endif %}
-            </h2>
+            </h3>
         {% endif %}
     </div>
 
-    <div class='item-content'>{{work.description|safe}}</div>
+    <div class='article-content'>{{work.description|safe}}</div>
 
     {% if work.url %}
-        <div class='item-link'>
-            <div>Project:</div>
+        <div class='article-link'>
+            <h4>Project:</h4>
             <a href='{{work.url}}'>{{work.url}}</a>
         </div>
     {% endif %}
     {% if work.github_url %}
-    <div class='item-link'>
-        <div>Github:</div>
-        <a href='{{work.github_url}}'>{{work.github_url}}</a>
-    </div>
+        <div class='article-link'>
+            <h4>Github:</h4>
+            <a href='{{work.github_url}}'>{{work.github_url}}</a>
+        </div>
     {% endif %}
-</div>
+</article>

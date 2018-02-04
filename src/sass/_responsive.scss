@@ -1,0 +1,26 @@
+@import 'breakpoints';
+
+$spacing-xs: 6px;
+$spacing-sm: 12px;
+$spacing-md: 24px;
+$spacing-lg: 36px;
+$spacing-xl: 48px;
+$spacing-xxl: 96px;
+
+@mixin responsive-content() {
+    margin: 0 auto;
+    max-width: 90%;
+
+    @media screen and (min-width: $break-sm) {
+        max-width: 85%;
+    }
+    @media screen and (min-width: $break-md) {
+        max-width: 80%;
+    }
+    @media screen and (min-width: $break-lg) {
+        max-width: 75%;
+    }
+    @media screen and (min-width: $break-xl) {
+        max-width: 70%;
+    }
+}

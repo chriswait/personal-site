@@ -1,0 +1,8 @@
+@import 'breakpoints';
+@import 'responsive';
+
+@media screen and (max-width: $break-gt-xs) {
+    ul {
+        padding-left: $spacing-md;
+    }
+}

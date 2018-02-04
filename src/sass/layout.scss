@@ -1,5 +1,4 @@
-@import 'breakpoints';
-@import 'colors';
+@import 'responsive';
 
 html, body {
     max-width: 100%;
@@ -8,131 +7,9 @@ html, body {
     -webkit-overflow-scrolling: touch;
 }
 
-header {
-    background-color: $off-white;
-    @media screen and (max-width: $break-gt-xs) {
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        border-bottom: 1px solid darkgray;
-    }
-
-    nav {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-
-      margin: 0px auto;
-      height: 50px;
-      max-width: 80%;
-
-      a {
-        padding: 0px 10px;
-        @media screen and (max-width: $break-gt-xs) { padding: 0px 5px; }
-      }
-    }
-}
-
-
-main {
-    @media screen and (max-width: $break-gt-xs) {
-        margin-top: 50px;
-    }
-}
-
 #hero {
-    background-color: $accent;
     text-align: center;
-    padding: 60px 0px;
     &.index-hero {
-        padding: 120px 0px;
-    }
-}
-
-
-.content {
-    margin: 0 auto;
-    max-width: 80%;
-    @media screen and (max-width: $break-gt-xs) {
-        max-width: 90%;
-    }
-    @media screen and (min-width: $break-lg) and (max-width: $break-gt-lg) {
-        max-width: 70%;
-    }
-    @media screen and (min-width: $break-xl) {
-        max-width: 60%;
-    }
-}
-section .content {
-    @media screen and (max-width: $break-gt-xs) {
-        padding: 12px 6px;
-    }
-    @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm) {
-        padding: 24px 0px;
-    }
-    @media screen and (min-width: $break-md) {
-        padding: 48px 0px;
-    }
-}
-
-section {
-    .section-item, .section-title {
-        padding: 12px 0px;
-    }
-    .item-header, .item-link {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        @media screen and (max-width: $break-xs) {
-          flex-direction: column
-        }
-    }
-    .item-header {
-        padding: 12px 0px;
-    }
-    .item-link {
-      div {
-        margin-right: 10px;
-      }
-      @media screen and (max-width: $break-xs) {
-          &:not(:last-child) {
-            margin-bottom: 10px;
-          }
-      }
-    }
-
-    .section-link-container {
-        width: 100%;
-        text-align: center;
-        @media screen and (max-width: $break-gt-xs){
-            padding: 12px 0px;
-        }
-        @media screen and (min-width: $break-sm) and (max-width: $break-gt-sm) {
-            padding: 24px 0px;
-        }
-        @media screen and (min-width: $break-md) and (max-width: $break-gt-md) {
-            padding: 48px 0px;
-        }
-        @media screen and (min-width: $break-lg) {
-            padding: 48px 0px;
-        }
-    }
-}
-
-section:nth-child(even) {
-    background-color: $section-background;
-}
-
-footer {
-    background-color: $off-white;
-    text-align: center;
-    padding: 60px 0px;
-    @media screen and (max-width: $break-gt-xs){
-        padding: 40px 0px;
-    }
-    .copyright {
-      margin-top: 20px;
+        padding: $spacing-xxl 0px;
     }
 }
