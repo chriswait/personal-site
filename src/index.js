@@ -1,3 +1,5 @@
+import './index.scss';
+
 function scrollToId(id) {
     var element = document.getElementById(id);
     if (typeof(element) !== 'undefined') {
