@@ -1,4 +1,4 @@
-@import 'sass/variables';
+@import 'sass/_variables.css';
 @import 'sass/article';
 @import 'sass/footer';
 @import 'sass/header';

@@ -12,12 +12,11 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.scss*/,
+                test: /\.css*/,
                 use: [
                     'style-loader',
                     'css-loader',
-                    'postcss-loader',
-                    'sass-loader'
+                    'postcss-loader'
                 ]
             }
         ]

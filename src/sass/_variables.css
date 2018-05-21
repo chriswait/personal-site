@@ -23,7 +23,7 @@ $break-lg: 1280px;
 $break-gt-lg: 1599px;
 $break-xl: 1600px;
 
-@mixin responsive-content() {
+@define-mixin responsive-content {
     margin: 0 auto;
     max-width: 90%;
 

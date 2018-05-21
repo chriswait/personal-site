@@ -1,7 +1,5 @@
-@import 'variables';
-
 article {
-    @include responsive-content();
+    @mixin responsive-content;
     padding-bottom: $spacing-md;
     .article-header, .article-link {
         display: flex;

@@ -1,5 +1,3 @@
-@import 'variables';
-
 header {
     background-color: $off-white;
 
@@ -12,7 +10,7 @@ header {
     }
 
     nav {
-        @include responsive-content();
+        @mixin responsive-content;
 
         height: 50px;
         display: flex;

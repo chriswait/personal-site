@@ -1,4 +1,4 @@
-import './index.scss';
+import './index.css';
 
 function scrollToId(id) {
     var element = document.getElementById(id);
