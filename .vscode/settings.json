@@ -1,4 +1,9 @@
 {
 "editor.tabSize": 4,
 "python.pythonPath": "${workspaceFolder}/venv/bin/python",
+"search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "static/dist/*": true
+},
 }
