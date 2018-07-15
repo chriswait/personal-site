@@ -5,8 +5,8 @@ Allows the following functionality:
 * Blogging with a rich text editor
 
 # Install
-npm install
-gulp
+yarn
+yarn build
 virtualenv venv
 source venv/bin/activate
 
